@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080a0e">
+<title>NORDRAIN – Beyond The Sound</title>
+<meta name="description" content="NORDRAIN – Beyond The Sound. The music of Nina & Erik.">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080a0e;
+  color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  background: linear-gradient(#10151d, #080a0e);
+  border-bottom: 1px solid #343a43;
+  text-align: center;
+  padding: 25px 20px 0;
+}
+
+.logo {
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #c8cbd0;
+  background: linear-gradient(
+    180deg, #fff 5%, #9299a2 45%, #e5e7e9 60%, #626b76 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 15px #aab4c044;
+}
+
+.tagline {
+  letter-spacing: 9px;
+  font-size: 12px;
+  color: #aeb4bd;
+  margin: 5px 0 22px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 5vw, 65px);
+  padding: 20px 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: #c4cbd5;
+  text-shadow: 0 0 12px #fff;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, #080a0e99, #080a0e33, #080a0e99),
+    linear-gradient(0deg, #080a0e, transparent 35%),
+    url('') center/cover,
+    linear-gradient(135deg, #182333, #080a0e 60%, #263342);
+}
+
+.hero-content {
+  padding: 70px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 7vw, 76px);
+  letter-spacing: 7px;
+  color: #d5d8dd;
+  text-shadow: 0 0 25px #c4d0e044;
+}
+
+.hero p {
+  letter-spacing: 7px;
+  color: #c1c5cc;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 35px;
+  border: 1px solid #aeb5c0;
+  letter-spacing: 3px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.hero-button:hover {
+  background: #d0d3d8;
+  color: #080a0e;
+}
+
+/* STREAMING */
+
+.streaming {
+  padding: 35px 20px;
+  text-align: center;
+  border-bottom: 1px solid #30343c;
+}
+
+.section-label {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #aeb4bd;
+  margin-bottom: 25px;
+}
+
+.platforms {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+
+.platforms a {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ddd;
+  transition: .3s;
+}
+
+.platforms a:hover {
+  color: white;
+  text-shadow: 0 0 15px #fff;
+}
+
+/* CONTENT */
+
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 65px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.content section + section {
+  border-left: 1px solid #353a43;
+  padding-left: 50px;
+}
+
+h2 {
+  font-size: 15px;
+  letter-spacing: 5px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  color: #c3c8d0;
+}
+
+.release-cover {
+  min-height: 270px;
+  max-width: 270px;
+  background:
+    radial-gradient(ellipse at 50% 25%, #455568, #111923 55%, #07090d);
+  border: 1px solid #555e6a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 10px 35px #000;
+}
+
+.release-cover strong {
+  font-size: 23px;
+  letter-spacing: 3px;
+  color: #d5d9df;
+}
+
+.release-cover span {
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  color: #bbc1ca;
+}
+
+.release-info h3 {
+  font-size: 22px;
+  margin-top: 22px;
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+.release-info p,
+.about p {
+  color: #aeb4bd;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.small-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 24px;
+  border: 1px solid #747d88;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.small-button:hover {
+  background: #d0d3d8;
+  color: #080a0e;
+}
+
+/* ABOUT */
+
+.about strong {
+  color: #e1e3e6;
+}
+
+.about p {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #30343c;
+  padding: 35px 20px;
+  text-align: center;
+  color: #747d88;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+footer .footer-logo {
+  color: #c3c8d0;
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin-bottom: 12px;
+}
+
+/* MOBILE */
+
+@media(max-width: 750px) {
+  nav {
+    gap: 20px;
+  }
+
+  .hero {
+    min-height: 390px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 45px 22px;
+  }
+
+  .content section + section {
+    border-left: none;
+    border-top: 1px solid #353a43;
+    padding: 40px 0 0;
+  }
+
+  .release-cover {
+    margin: auto;
+  }
+
+  .platforms {
+    gap: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NORDRAIN</div>
+  <div class="tagline">BEYOND THE SOUND</div>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#music">MUSIC</a>
+    <a href="#videos">VIDEOS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>NORDRAIN</h1>
+    <p>BEYOND THE SOUND</p>
+    <a href="#videos" class="hero-button">EXPLORE OUR MUSIC</a>
+  </div>
+</section>
+
+<section class="streaming" id="music">
+  <div class="section-label">LISTEN TO NORDRAIN</div>
+  <div class="platforms">
+    <a href="#">Spotify</a>
+    <a href="#">YouTube</a>
+    <a href="#">Apple Music</a>
+    <a href="#">Amazon Music</a>
+  </div>
+</section>
+
+<div class="content">
+
+<section id="videos">
+  <h2>LATEST RELEASE</h2>
+
+  <div class="release-cover">
+    <strong>NORDRAIN</strong>
+    <span>IT'S ALL IN YOUR MIND</span>
+  </div>
+
+  <div class="release-info">
+    <h3>It's All In Your Mind</h3>
+    <p>Album · 4 Tracks</p>
+    <a href="#" class="small-button">LISTEN NOW</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>ABOUT NINA & ERIK</h2>
+
+  <p>
+    <strong>NORDRAIN</strong> is the union of two distinct
+    voices — Nina and Erik.
+  </p>
+
+  <p>
+    A powerful fusion of melody, rap and epic atmosphere,
+    inspired by the strength of the North, the beauty of
+    nature and the battles within us.
+  </p>
+
+  <p>
+    Two voices. One sound. Beyond the ordinary.
+  </p>
+
+  <a href="#contact" class="small-button">GET IN TOUCH</a>
+</section>
+
+</div>
+
+</main>
+
+<footer id="contact">
+  <div class="footer-logo">NORDRAIN</div>
+  BEYOND THE SOUND
+  <p style="margin-top:20px;">
+    <a href="mailto:contact@nordrainmusic.com">
+      contact@nordrainmusic.com
+    </a>
+  </p>
+  <p style="margin-top:20px;">© 2026 NORDRAIN. ALL RIGHTS RESERVED.</p>
+</footer>
+
+</body>
+</html>
