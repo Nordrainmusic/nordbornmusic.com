@@ -82,15 +82,40 @@ nav {
 }
 
 nav a {
-    color: #f0f0f0;
+    color: #d8bd83;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
-    text-shadow: 0 2px 5px #000;
-    transition: color .3s;
+    text-shadow: 0 0 5px rgba(218, 170, 90, 0.45);
+    transition: all .3s ease;
 }
 
-nav a:hover { color: white; }
+nav a {
+    position: relative;
+    display: inline-block;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #b51f24;
+    box-shadow: 0 0 6px #ff2424, 0 0 14px rgba(255, 36, 36, 0.7);
+    transform: translateX(-50%);
+    transition: width .3s ease;
+}
+
+nav a:hover {
+    color: #d8b883;
+    text-shadow: 0 0 6px rgba(218, 170, 90, 0.8), 0 0 14px rgba(218, 170, 90, 0.45);
+}
+
+nav a:hover::after {
+    width: 70%;
+}
 
 /* SOCIAL LINKS */
 
